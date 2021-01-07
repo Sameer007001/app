@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% block content%}
+<div class="container-fluid my-4">
+    <div class="p-3 shadow mx-auto maxw" >
+    <div class="mx-auto p-3 rounded innerdiv">
+      <h5 class="alert font-weight-bold text-purple">Sign Up</h5>
+
+      <form method="post" action="{% url 'insertVendor' %}" onsubmit="return deliveryBoyMobileValidation()">
+        <div class="verticalScroll">
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input name="name" id="name" class="form-control" required="required"/>
+        </div>
+        
+        <div class="form-group">
+          <label for="mobilenum">Mobile Number</label>
+          <input name="mobilenum" id="mobilenum" class="form-control" required="required"/>
+        </div>
+  
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input name="email" id="email" type="email" class="form-control" required="required"/>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input name="password" id="password" type="password" class="form-control"/>
+        </div>
+
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input name="location" id="location" class="form-control"/>
+        </div>
+
+        <div class="form-group">
+          <label for="acc_num">Account Number</label>
+          <input name="acc_num" id="acc_num" class="form-control"/>
+        </div>
+
+        <div class="form-group">
+          <label for="ifsc">IFSC Code</label>
+          <input name="ifsc" id="ifsc" class="form-control"/>
+        </div>
+
+      </div>
+
+
+        <button type="submit" class="btn mt-3">Submit</button>
+    </form>
+    
+    </div>
+    </div>
+{% endblock content%}

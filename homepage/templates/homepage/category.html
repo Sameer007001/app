@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block content%}
+{% if service_user != 'Client'%}
+<div class="container">
+    <div class="row">
+      <div class="text-center col justify-content-md-center m-2 p-5 border border-success" data-toggle="modal" data-target="#modal_home">BTL</div>
+      <div class="text-center col justify-content-md-center m-2 p-5 border border-success" data-toggle="modal" data-target="#modal_home">In Shop or Merchant</div>
+      <div class="text-center col justify-content-md-center m-2 p-5 border border-success" data-toggle="modal" data-target="#modal_home">Trade Marketing & Delivery</div>
+      <div class="text-center col justify-content-md-center m-2 p-5 border border-success" data-toggle="modal" data-target="#modal_home">Warehouse Operations</div>
+      <div class="text-center col justify-content-md-center m-2 p-5 border border-success" data-toggle="modal" data-target="#modal_home">D2 Consumer Drives</div>
+    </div>
+  </div>
+  {% else %}
+  <div class="container">
+    <div class="row" id='categary_choose' category_user = '{{service_user}}'>
+      <div class="text-center col justify-content-md-center m-2 p-5 border border-success" data-toggle="modal" data-target="#modal_home" cat="Retail Branding">Retail Branding<div class="category_hide p-2 border border-warning">1</div><div class="category_hide p-2 border border-warning">2</div><div class="category_hide p-2 border border-warning">3</div><div class="category_hide p-2 border border-warning">4</div><div class="category_hide p-2 border border-warning">5</div><div class="category_hide p-2 border border-warning">6</div></div>
+      <div class="text-center col justify-content-md-center m-2 p-5 border border-success" data-toggle="modal" data-target="#modal_home" cat="Collateral">Collateral<div class="category_hide p-2 border border-warning">1</div><div class="category_hide p-2 border border-warning">2</div><div class="category_hide p-2 border border-warning">3</div><div class="category_hide p-2 border border-warning">4</div><div class="category_hide p-2 border border-warning">5</div><div class="category_hide p-2 border border-warning">6</div></div>
+      <div class="text-center col justify-content-md-center m-2 p-5 border border-success" data-toggle="modal" data-target="#modal_home" cat="Print">&nbsp;Print&nbsp;<div class="category_hide p-2 border border-warning">1</div><div class="category_hide p-2 border border-warning">2</div><div class="category_hide p-2 border border-warning">3</div><div class="category_hide p-2 border border-warning">4</div><div class="category_hide p-2 border border-warning">5</div><div class="category_hide p-2 border border-warning">6</div></div>
+      <div class="text-center col justify-content-md-center m-2 p-5 border border-success" data-toggle="modal" data-target="#modal_home" cat="Setups">Setups<div class="category_hide p-2 border border-warning">1</div><div class="category_hide p-2 border border-warning">2</div><div class="category_hide p-2 border border-warning">3</div><div class="category_hide p-2 border border-warning">4</div><div class="category_hide p-2 border border-warning">5</div><div class="category_hide p-2 border border-warning">6</div></div>
+    </div>
+  </div>
+
+  <form method="POST" action="" id="category_form">
+      {% csrf_token %}
+      <textarea hidden="hidden" name="categories"></textarea>
+      <button type="submit" class="btn">Submit</button>
+  </form>
+
+
+  {% endif %}
+{% endblock content%}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block content%}
+
+<div class="container-fluid my-4">
+    <div class="p-3 shadow mx-auto maxw" >
+    <div class="mx-auto p-3 rounded innerdiv">
+      <h5 class="alert font-weight-bold" style="color: rgb(176, 127, 221)">Sign In</h5>
+      <!-- onsubmit="return deliveryBoyMobileValidation()" -->
+      <form method="post" action="{% url 'promoterLogin' %}">
+        <div class="verticalScroll">
+
+        <div class="form-group">
+          <label for="mobile_num">Enter your mobile number</label>
+          <input name="mobile_num" id="mobile_num" class="form-control" required="required"/>
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Enter your password</label>
+          <input name="password" type="password" id="password" class="form-control" required="required"/>
+        </div>
+      </div>
+
+
+        <button type="submit" class="btn mt-3">Login</button>
+    </form>
+    
+    </div>
+    </div>
+{% endblock content%}

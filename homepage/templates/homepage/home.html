@@ -1,0 +1,92 @@
+{% extends 'base.html' %} {% block content%}
+{% load static %}
+
+<div class="container" id="homebox">
+  <div class="row" style="margin-top: 110px">
+    <div class="text-center d-flex justify-content-sm-center col-lg-4 col-md-4" data-toggle="modal" data-target="#modal_home">
+      <img src="{% static 'promoter/crush_paper_trans.png'%}" width="90px" height="90px"/>
+      <div class="mt-2">Setup &<br>Collateral<br>Production</div>
+    </div>
+    <div class="text-center d-flex justify-content-sm-center col-lg-4 col-md-4" data-toggle="modal" data-target="#modal_home">
+      <img src="{% static 'promoter/crush_paper_trans.png'%}" width="90px" height="90px"/>
+      <div class="mt-2">Designing &<br>Creatives<br>Services</div>
+    </div>
+    <div class="text-center d-flex justify-content-sm-center col-lg-4 col-md-4" data-toggle="modal" data-target="#modal_home">
+      <img src="{% static 'promoter/crush_paper_trans.png'%}" width="90px" height="90px"/>
+      <div class="mt-2">Offline<br>Manpower<br>Services</div>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="text-center d-flex justify-content-sm-center col-lg-6 col-md-6" data-toggle="modal" data-target="#modal_home">
+      <img src="{% static 'promoter/crush_paper_trans.png'%}" width="90px" height="90px"/>
+      <div class="mt-2">Digital<br>Marketing<br>Services</div>
+    </div>
+    <div class="text-center d-flex justify-content-sm-center col-lg-6 col-md-6" data-toggle="modal" data-target="#modal_home">
+      <img src="{% static 'promoter/crush_paper_trans.png'%}" width="90px" height="90px"/>
+      <div class="mt-4">&nbsp;Asmik&nbsp;</div>
+    </div>
+</div>
+
+
+<!-- Button trigger modal
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button> -->
+
+<!-- Modal1 Start-->
+<div class="modal fade" id="modal_home" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="background: rgba(255, 255, 255, 0.9)">
+      <div class="modal-header border-0">
+        <button type="button" class="close p-0 mr-1 mt-1" data-dismiss="modal" aria-label="Close" style="word-wrap: break-word;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mt-0 mb-2">
+        <div class="row" id="modal1">
+          <div class="col d-flex text-center m-3" data-toggle="modal" data-target="#modal2_home">
+            <img src="{% static 'promoter/crush_paper_trans.png'%}" width="90px" height="90px"/><div class="ml-2" style="margin-top: 30px;">Parter</div>
+          </div>
+          <span class="align-self-center">or</span>
+          <div class="col d-flex text-center m-3">
+            <img src="{% static 'promoter/crush_paper_trans.png'%}" width="90px" height="90px"/><div class="ml-2" style="margin-top: 30px;">Client</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal1 end -->
+
+
+<!-- Modal2 Start-->
+<div class="modal fade" id="modal2_home" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <button type="button" class="close p-0 mr-1 mt-1" data-dismiss="modal" aria-label="Close" style="word-wrap: break-word;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mt-0 mb-2">
+        <div class="row" id="modal2">
+          <div class="col d-flex text-center m-3">
+            <img src="{% static 'promoter/crush_paper_trans.png'%}" width="90px" height="90px"/><div class="ml-2" style="margin-top: 30px;">Vendor</div>
+          </div>
+          <span class="align-self-center">or</span>
+          <div class="col d-flex text-center m-3">
+            <img src="{% static 'promoter/crush_paper_trans.png'%}" width="90px" height="90px"/><div class="ml-2" style="margin-top: 30px;">Promoter</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal1 end -->
+
+
+
+{% endblock content%}
+
+
+
